@@ -1,0 +1,25 @@
+# AutoOntologyBench v3 code release
+# Core W3C RDF/OWL/SHACL stack
+rdflib==7.6.0
+pyshacl==0.40.1
+owlrl
+
+# v3 evaluation harness
+httpx
+huggingface_hub
+numpy
+jsonschema
+lxml
+openai
+pydantic
+pyyaml
+
+# Optional lane verifier dependencies.
+# Install only the lanes you evaluate; some are large.
+rdkit
+libroadrunner
+pm4py
+
+# Test tooling
+pytest==9.1.1
+hypothesis==6.169.3

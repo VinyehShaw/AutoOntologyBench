@@ -1,0 +1,21 @@
+schema: aob-byok-source/1
+source_id: gatekeeper-library-repin-1946bc28
+lane: BYOK-L01
+official_url: https://github.com/open-policy-agent/gatekeeper-library
+download_url_or_api: https://codeload.github.com/open-policy-agent/gatekeeper-library/tar.gz/1946bc28e1337b90b7e675e3f0fa94aa2e92fd6e
+source_type: git
+native_engine: opa
+license: Apache-2.0
+license_url: https://github.com/open-policy-agent/gatekeeper-library/blob/master/LICENSE
+redistribution_policy: fetch_recipe_only
+pinned:
+  commit_or_release: 1946bc28e1337b90b7e675e3f0fa94aa2e92fd6e
+  urls:
+  - https://codeload.github.com/open-policy-agent/gatekeeper-library/tar.gz/1946bc28e1337b90b7e675e3f0fa94aa2e92fd6e
+  - https://ghfast.top/https://github.com/open-policy-agent/gatekeeper-library/archive/1946bc28e1337b90b7e675e3f0fa94aa2e92fd6e.tar.gz
+  sha256: 5d809aada71b307f7451da191e8c518d3ab573cb88d9a5799c6095d00a8435a7
+  upstream_version: commit 1946bc28e1337b90b7e675e3f0fa94aa2e92fd6e (2026-09-28)
+plugins:
+  source: gatekeeper_source.py
+  task_family: gk_policy_family.py
+  verifier: gk_opa_verifier.py

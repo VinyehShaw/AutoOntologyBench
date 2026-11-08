@@ -1,0 +1,1 @@
+"""core package: protocols + native domains (see protocols.py; owners W2/W3/W4/W6)."""

@@ -1,0 +1,14 @@
+schema: aob-byok-bank/1
+bank_id: byok-example1-gk1946
+owner: aob-factory-example
+license: Apache-2.0
+source_config: source.yaml
+generation:
+  families: [gatekeeper-policy-repair]
+  candidate_count: 10
+  seed: 7
+  regime: repair
+  semantic_profile: rego-opa/0.70
+output:
+  public_dir: benchmark/examples/byok/example1_repin_gatekeeper/out
+  private_dir: benchmark/examples/byok/example1_repin_gatekeeper/out/private_oracle

@@ -1,0 +1,20 @@
+schema: aob-byok-source/1
+source_id: dcmi-terms
+lane: BYOK-LXX
+official_url: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+download_url_or_api: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+source_type: single-file
+native_engine: rdflib
+license: CC-BY-4.0
+license_url: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+redistribution_policy: redistributable_with_attribution
+pinned:
+  commit_or_release: dcmi-20120614
+  urls:
+  - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+  sha256: 13df401072dd7015bf9d75162f3e41c8138075304b7b9cc1aa1e9c16db976797
+  upstream_version: DCMI Metadata Terms (dcterms:modified 2012-06-14, retrieved 2026-10-27)
+plugins:
+  source: dcmi_source.py
+  task_family: dcmi_family.py
+  verifier: dcmi_verifier.py

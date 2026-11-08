@@ -1,0 +1,14 @@
+schema: aob-byok-bank/1
+bank_id: byok-example2-dcmi
+owner: aob-factory-example
+license: CC-BY-4.0
+source_config: source.yaml
+generation:
+  families: [dcmi-subclass-closure, dcmi-subproperty-closure]
+  candidate_count: 6
+  seed: 3
+  regime: application
+  semantic_profile: rdf-rdfs/1.1
+output:
+  public_dir: benchmark/examples/byok/example2_dcmi_terms/out
+  private_dir: benchmark/examples/byok/example2_dcmi_terms/out/private_oracle

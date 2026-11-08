@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.venv/
+venv/
+
+# Local/private evaluation inputs and artifacts
+runs/
+data/
+bank/
+release_v3/tasks/
+release_20k/tasks/
+external_knowledge/
+reports/
+workspaces/
+paper/
+references/
+.omo/
+.envs/
+backups/
+*.log
+
+# Credentials
+.env
+.env.*
+!.env.example
