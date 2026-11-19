@@ -1,0 +1,71 @@
+{
+  "case_id": "L04-construction-01",
+  "complexity": "high",
+  "difficulty": "structural-high",
+  "evidence_paths": "public/l04-01c36bab72a0-232f2344/chebi_entity.json; public/l04-01c36bab72a0-232f2344/initial_state.json; public/l04-01c36bab72a0-232f2344/probe_spec.json",
+  "existing_figure": null,
+  "family_id": "l04.con_ancestor_closure_via_probes",
+  "figure_kind": "ontology ancestor-closure graph",
+  "figure_notes": "Show CHEBI:131450 as the public seed; show direct-parent probes as the only evidence channel; final answer is the exact sorted ancestor set. Do not show the answer set.",
+  "lane": "L04",
+  "oracle_handle": "l04-oracle-b78443f7c1e8a341",
+  "sample": "construction-01",
+  "sample_dir": "samples/L04/sample-06",
+  "selection": "construction",
+  "source_snapshots": "rhea-chebi/rhea-142+chebi-256",
+  "structure_variant": "ancestor-closure",
+  "task_id": "l04-01c36bab72a0-232f2344",
+  "task_record": {
+    "base_goal_id": "01c36bab72a027f2336be0fa9df9c2e8",
+    "complexity": "high",
+    "dataset_id": "autoontobench-bank-20000-candidate-dev1",
+    "difficulty": "structural-high",
+    "family_id": "l04.con_ancestor_closure_via_probes",
+    "instance_id": "232f2344dc299641ad6af3ee308319b2",
+    "lane_id": "L04",
+    "oracle_handle": "l04-oracle-b78443f7c1e8a341",
+    "public": {
+      "allowed_tools": [
+        "inspect_schema",
+        "inspect_state",
+        "read_public_doc",
+        "probe_native",
+        "edit_artifact",
+        "validate_artifact",
+        "check_action_with_ontology",
+        "submit_final"
+      ],
+      "budget": {
+        "actions": 4,
+        "probes": 26
+      },
+      "observation_refs": [
+        "public/l04-01c36bab72a0-232f2344/chebi_entity.json",
+        "public/l04-01c36bab72a0-232f2344/initial_state.json",
+        "public/l04-01c36bab72a0-232f2344/probe_spec.json"
+      ],
+      "user_goal": "Only the label of ChEBI entity CHEBI:131450 (2,6-dihydroxybenzoate) is public, plus a budgeted probe tool that reveals the direct rdfs:subClassOf parents of one ChEBI class per probe within the stated budget. Construct the transitive ancestor closure yourself and report the exact, complete, sorted set of ancestor ChEBI class identifiers of CHEBI:131450 in the pinned ChEBI ontology (excluding CHEBI:131450 itself)."
+    },
+    "qualification": {
+      "leakage_clean": true,
+      "native_verified": true,
+      "nontrivial": true,
+      "release_eligible": true,
+      "semantic_relevance": true,
+      "solvable": true
+    },
+    "schema_version": "aob-task/5.0",
+    "semantic_profile": "rdf-sparql+closure/1",
+    "source_snapshot_ids": [
+      "rhea-chebi/rhea-142+chebi-256"
+    ],
+    "source_unit_ids": [
+      "chebi_entity/CHEBI:131450"
+    ],
+    "split": "test",
+    "status": "QUALIFIED",
+    "task_id": "l04-01c36bab72a0-232f2344",
+    "task_regime": "construction"
+  },
+  "task_regime": "construction"
+}
