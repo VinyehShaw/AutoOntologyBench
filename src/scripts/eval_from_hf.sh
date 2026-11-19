@@ -8,7 +8,7 @@ REPO_ROOT="$(cd "$SRC_ROOT/.." && pwd)"
 cd "$REPO_ROOT"
 
 HF_DATASET_REPO="${HF_DATASET_REPO:-Vinyeh/AutoOntologyBench}"
-DATA_DIR="${AOB_DATA_DIR:-$REPO_ROOT/AutoOntologyBench}"
+DATA_DIR="${AOB_DATA_DIR:-$REPO_ROOT/../aob-data}"
 
 if command -v hf >/dev/null 2>&1; then
   hf download "$HF_DATASET_REPO" --repo-type dataset --local-dir "$DATA_DIR"
@@ -21,9 +21,17 @@ snapshot_download(repo_id=repo, repo_type="dataset", local_dir=dest)
 PY
 fi
 
-TASKS="$DATA_DIR/tasks/qualified_tasks_test.jsonl"
-if [ ! -f "$TASKS" ]; then
-  echo "eval_from_hf: task file not found after download: $TASKS" >&2
+TASKS=""
+for candidate in \
+  "$DATA_DIR/tasks/qualified_tasks_test.jsonl" \
+  "$REPO_ROOT/AutoOntologyBench/tasks/qualified_tasks_test.jsonl"; do
+  if [ -f "$candidate" ]; then
+    TASKS="$candidate"
+    break
+  fi
+done
+if [ -z "$TASKS" ]; then
+  echo "eval_from_hf: task file not found after download under $DATA_DIR" >&2
   exit 2
 fi
 

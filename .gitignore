@@ -8,6 +8,11 @@ venv/
 # Local/private evaluation inputs and artifacts
 runs/
 data/
+aob-data/
+AutoOntologyBench-Core-data/
+AutoOntologyBench/
+release_core/
+release_candidates/
 bank/
 release_v3/tasks/
 release_20k/tasks/
