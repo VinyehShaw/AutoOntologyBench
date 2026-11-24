@@ -1,6 +1,21 @@
 # AutoOntologyBench
 
-Evaluation code for **AutoOntologyBench**, covering two tracks in one repository.
+[![arXiv](https://img.shields.io/badge/arXiv-2611.27734-b31b1b.svg)](https://arxiv.org/abs/2611.27734)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-AutoOntologyBench-yellow)](https://huggingface.co/AutoOntologyBench)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+**AutoOntologyBench** is a task-grounded benchmark for **agentic knowledge
+engineering**. It asks whether foundation-model agents can acquire, organize,
+repair, and construct domain knowledge, and whether the resulting ontologies
+improve *verified* task success over direct tool use or retrieval.
+
+The benchmark is grounded in **18 real-world, versioned knowledge sources**
+across **7 domains** and **16 native-verifiable lanes**, each scored by its
+source-native verifier. Tasks span four regimes: **Application**, **Repair**,
+**Organization**, and **Construction**. The released Answer-20K set contains
+**19,947 audited tasks** derived from 4,511 base goals and 325 task families;
+the Core-track public package contains **19,950 world-grounded task records**
+across L01–L16.
 
 | Track | Scope | Tasks | Entry point |
 |---|---|---:|---|
@@ -10,6 +25,33 @@ Evaluation code for **AutoOntologyBench**, covering two tracks in one repository
 The public data is downloaded from HuggingFace. The private oracles are mounted
 separately and must never be published. Research/experiment code, labels, run
 artifacts, and oracle payloads are not part of this repository.
+
+## World lanes and sources
+
+Each lane pairs one or two pinned source snapshots with a public task interface
+and a native verifier. The 16 lanes cover 18 sources across seven domains:
+
+| Lane | Domain | Pinned source(s) |
+|---|---|---|
+| L01 | Policy | [Gatekeeper library](https://github.com/open-policy-agent/gatekeeper-library) |
+| L02 | Policy | [Kubernetes CEL](https://kubernetes.io/docs/reference/using-api/cel/) |
+| L03 | Workflow | [Camunda DMN examples](https://github.com/camunda/camunda-bpm-examples/tree/master/dmn-engine/dmn-engine-java-main-method) · [DMN TCK](https://dmn-tck.github.io/tck/) |
+| L04 | Chemistry | [Rhea](https://www.rhea-db.org/help/download) · [ChEBI](https://www.ebi.ac.uk/chebi/downloads) |
+| L05 | Chemistry | [RDKit functional-group hierarchy](https://github.com/rdkit/rdkit/blob/master/Data/Functional_Group_Hierarchy.txt) |
+| L06 | Biology | [Gene Ontology](https://geneontology.org/docs/download-ontology/) |
+| L07 | Biology | [BioModels](https://www.ebi.ac.uk/biomodels/) |
+| L08 | Clinical | [Clinical Quality Language](https://github.com/cqframework/clinical_quality_language) |
+| L09 | Clinical | [WHO SMART-ANC](https://github.com/WorldHealthOrganization/smart-anc) |
+| L10 | Home tasks | [BEHAVIOR-1K BDDL](https://github.com/StanfordVL/BEHAVIOR-1K/blob/main/docs/behavior_components/behavior_tasks.md) |
+| L11 | Home tasks | [OmniGibson](https://github.com/StanfordVL/OmniGibson) |
+| L12 | Workflow | [PM4Py](https://github.com/process-intelligence-solutions/pm4py) |
+| L13 | Web APIs | [APIs.guru OpenAPI directory](https://github.com/APIs-guru/openapi-directory) |
+| L14 | Chemistry | [ChEMBL](https://www.ebi.ac.uk/chembl/) |
+| L15 | Biology | [Reactome](https://reactome.org/) |
+| L16 | Biology | [UniProt](https://www.uniprot.org/) |
+
+Links point to the upstream projects; each benchmark release pins a specific
+commit or release recorded in the dataset manifest.
 
 ## Repository layout
 
@@ -246,6 +288,17 @@ PYTHONPATH=src pytest src/benchmark/eval_20k/tests
 ```
 
 Expected: `134 passed, 1 skipped`.
+
+## Citation
+
+```bibtex
+@article{shao2026autoontologybench,
+  title   = {AutoOntologyBench: A Task-Grounded Benchmark for Agentic Knowledge Engineering},
+  author  = {Shao, Minye and Xiao, Chenghao and Zhao, Xingyue and Long, Yang},
+  journal = {arXiv preprint arXiv:2611.27734},
+  year    = {2026}
+}
+```
 
 ## License and academic use
 
