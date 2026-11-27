@@ -1,13 +1,20 @@
-# AutoOntologyBench
+<h1><img src="docs/assets/logo.png" alt="AutoOntologyBench logo" width="56" valign="middle" /> AutoOntologyBench</h1>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2611.27734-b31b1b.svg)](https://arxiv.org/abs/2611.27734)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-AutoOntologyBench-yellow)](https://huggingface.co/AutoOntologyBench)
+[![AutoOntologyBench downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVinyeh%2FAutoOntologyBench%3Fexpand%255B%255D%3Ddownloads&query=%24.downloads&label=AutoOntologyBench&prefix=downloads%20&color=yellow&logo=huggingface&logoColor=white&cacheSeconds=300)](https://huggingface.co/datasets/Vinyeh/AutoOntologyBench/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 **AutoOntologyBench** is a task-grounded benchmark for **agentic knowledge
 engineering**. It asks whether foundation-model agents can acquire, organize,
 repair, and construct domain knowledge, and whether the resulting ontologies
 improve *verified* task success over direct tool use or retrieval.
+
+Follow the [AutoOntologyBench community on Hugging Face](https://huggingface.co/AutoOntologyBench)
+for releases and discussion.
+
+<p align="center">
+  <img src="docs/assets/overview.png" alt="AutoOntologyBench overview" width="760" />
+</p>
 
 The benchmark is grounded in **18 real-world, versioned knowledge sources**
 across **7 domains** and **16 native-verifiable lanes**, each scored by its
@@ -41,7 +48,7 @@ and a native verifier. The 16 lanes cover 18 sources across seven domains:
 | L06 | Biology | [Gene Ontology](https://geneontology.org/docs/download-ontology/) |
 | L07 | Biology | [BioModels](https://www.ebi.ac.uk/biomodels/) |
 | L08 | Clinical | [Clinical Quality Language](https://github.com/cqframework/clinical_quality_language) |
-| L09 | Clinical | [WHO SMART-ANC](https://github.com/WorldHealthOrganization/smart-anc) |
+| L09 | Clinical | [World Health Organization (WHO) SMART Antenatal Care (SMART-ANC)](https://github.com/WorldHealthOrganization/smart-anc) |
 | L10 | Home tasks | [BEHAVIOR-1K BDDL](https://github.com/StanfordVL/BEHAVIOR-1K/blob/main/docs/behavior_components/behavior_tasks.md) |
 | L11 | Home tasks | [OmniGibson](https://github.com/StanfordVL/OmniGibson) |
 | L12 | Workflow | [PM4Py](https://github.com/process-intelligence-solutions/pm4py) |
