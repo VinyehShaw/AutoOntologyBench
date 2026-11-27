@@ -1,7 +1,7 @@
 <h1><img src="docs/assets/logo.png" alt="AutoOntologyBench logo" width="56" valign="middle" /> AutoOntologyBench</h1>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2611.27734-b31b1b.svg)](https://arxiv.org/abs/2611.27734)
-[![AutoOntologyBench downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVinyeh%2FAutoOntologyBench%3Fexpand%255B%255D%3Ddownloads&query=%24.downloads&label=AutoOntologyBench&prefix=downloads%20&color=yellow&logo=huggingface&logoColor=white&cacheSeconds=300)](https://huggingface.co/datasets/Vinyeh/AutoOntologyBench/)
+[![AutoOntologyBench downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVinyeh%2FAutoOntologyBench%3Fexpand%255B%255D%3Ddownloads&query=%24.downloads&label=AutoOntologyBench&prefix=Downloads%20&color=yellow&labelColor=5B3FA8&style=for-the-badge&logo=huggingface&logoColor=white&cacheSeconds=60)](https://huggingface.co/datasets/Vinyeh/AutoOntologyBench/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 **AutoOntologyBench** is a task-grounded benchmark for **agentic knowledge
@@ -9,8 +9,7 @@ engineering**. It asks whether foundation-model agents can acquire, organize,
 repair, and construct domain knowledge, and whether the resulting ontologies
 improve *verified* task success over direct tool use or retrieval.
 
-Follow the [AutoOntologyBench community on Hugging Face](https://huggingface.co/AutoOntologyBench)
-for releases and discussion.
+Follow the [AutoOntologyBench community](https://huggingface.co/AutoOntologyBench) <img src="docs/assets/huggingface.svg" alt="Hugging Face" width="18" height="18" valign="middle" /> for releases and discussion.
 
 <p align="center">
   <img src="docs/assets/overview.png" alt="AutoOntologyBench overview" width="760" />
